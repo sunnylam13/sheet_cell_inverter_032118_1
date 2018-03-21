@@ -82,7 +82,7 @@ def row_analyzer(values_dict,min_value,max_value):
 			logging.debug('The invert_cell_coordinate is:  %s' % (invert_cell_coordinate) )
 
 			# store the invert_cell_coordinate as the key, with value as cell_value
-			values_dict[cell_coordinate] = cell_value
+			values_dict[invert_cell_coordinate] = cell_value
 			# logging.debug('The value for %s has been stored in the values_dict' % (cell_coordinate))
 			# logging.debug('The value for %s' % (cell_coordinate) )
 			# logging.debug(cell_value)
