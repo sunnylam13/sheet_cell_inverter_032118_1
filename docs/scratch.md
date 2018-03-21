@@ -65,3 +65,23 @@ That's the limit...
 
 When I use a smaller sheet like `updatedProduceSales_v2.xlsx` the program works fine...
 
+## Wednesday, March 21, 2018 10:31 AM
+
+revised code, noticed that the formulas in Total no longer work because the formula is no longer valid
+
+Since the formulae were originally for adding cells together on the same row, when you invert it the formula is still exactly the same...
+
+what we need is to use the actual value rather than the formula...
+
+could try `data_only=True`:
+
+	>>> wbDataOnly = openpyxl.load_workbook('noWriteFormula.xlsx',data_only=True)
+
+maybe that will work...
+
+okay it works...
+
+	wb = openpyxl.load_workbook(sheet_to_process,data_only=True)
+
+now only the values are used and formulas are not, the Total row values are now correct...
+

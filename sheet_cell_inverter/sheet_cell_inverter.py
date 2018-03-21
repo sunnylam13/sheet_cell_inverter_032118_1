@@ -34,7 +34,8 @@ sheet_to_process = sys.argv[1] # this should be the filename/file path
 # ACCESS WORKBOOK
 #####################################
 
-wb = openpyxl.load_workbook(sheet_to_process)
+# wb = openpyxl.load_workbook(sheet_to_process)
+wb = openpyxl.load_workbook(sheet_to_process,data_only=True)
 sheet = wb.active # switch to the active sheet, there should only be one
 
 logging.debug('Testing to see that sheet loaded right, giving a value:  ')
